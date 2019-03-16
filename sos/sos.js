@@ -130,6 +130,7 @@ function makeErrorMsg(errorObj) { //エラーメッセージ
 // -------------- //
 
 function initializeApp() { //LIFFアプリの初期化
+    window.alert("liff作成開始");
     liff.init(() => initializeLiff(), error => uiStatusError(makeErrorMsg(error), false)); //エラーの有無を確認
 }
 
