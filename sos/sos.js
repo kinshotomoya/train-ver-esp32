@@ -135,8 +135,10 @@ function initializeApp() { //LIFFアプリの初期化
 
 function initializeLiff() { //Bluetoothを探す。
     liff.initPlugins(['bluetooth']).then(() => { //エラーの有無の確認
+        window.alert('blutooth接続できる')
         liffCheckAvailablityAndDo(() => liffRequestDevice());
     }).catch(error => {
+        window.alert('blutoothエラーです。')
         uiStatusError(makeErrorMsg(error), false);
     });
 }
