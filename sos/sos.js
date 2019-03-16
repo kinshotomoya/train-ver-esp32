@@ -221,7 +221,7 @@ function liffGetUserService(service) { //繋いだユーザの情報を取得
     // Toggle LED
     service.getCharacteristic(LED_CHARACTERISTIC_UUID).then(characteristic => {
         window.ledCharacteristic = characteristic;
-        alert("LIFF側です。" + window.ledCharacteristic);
+        window.alert("LIFF側です。" + window.ledCharacteristic);
 
         // Switch off by default
         liffToggleDeviceLedState(false);
