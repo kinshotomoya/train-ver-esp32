@@ -1,3 +1,4 @@
+window.alert('sos.jsです');
 // User service UUID: Change this to your generated service UUID
 const USER_SERVICE_UUID = '180ceb9c-07a3-4f06-95e7-7927579f2c7c'; // LED, Button
 // User service characteristics
