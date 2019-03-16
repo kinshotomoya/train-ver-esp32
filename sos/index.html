@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="robots" content="noindex,nofollow">
+    <!--Vuetify-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./sos.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!--車両ナンバーの表示-->
+      <div class="train_number_text">
+        <p>車両 No.0</p>
+      </div>
+
+      <div class="mode_change_button">
+        <v-btn href="../index.html" round color="green accent-2" dark>車内環境</v-btn>
+        <v-btn href="./index.html" round color="red lighten-1" dark>緊急</v-btn>
+      </div>
+
+      <div class="description_text">
+        <p>緊急の際だけ使用してください。</p>
+      </div>
+
+      <v-btn v-on:click="sos_on" fab white big color="primary" class="sos_button">
+        <h3 class="h_sos">SOS</h3>
+        <i class="fas fa-bell"></i>
+        <p class="des_sos">ブザーをならす</p>
+      </v-btn>
+
+      <div class="description_text bottom_text">
+        <p>マナーモードでも大きいブザーがなります。</p>
+      </div>
+    </div>
+
+    <!--Vuetify-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+    <script src="./main_sos.js"></script>
+    <!--Liff-->
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script src="./sos.js"></script>
+  </body>
+</html>

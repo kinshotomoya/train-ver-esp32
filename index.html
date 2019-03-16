@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--Vuetify-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css"/>
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css"/>
+    <link href="liff.css" rel="stylesheet" type="text/css"/>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+    <!--axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--Liff-->
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script src="liff.js"></script>
+  </head>
+  <body>
+    <div id="app">
+
+      <!--車両ナンバーの表示-->
+      <div class="train_number_text">
+        <p>車両 No.0</p>
+      </div>
+
+      <!--モード切り替えボタンの表示-->
+      <div class="mode_change_button">
+        <v-btn href="./index.html" round color="green accent-2" dark>車内環境</v-btn>
+        <v-btn href="./sos/index.html" round color="red lighten-1" dark>緊急</v-btn>
+      </div>
+
+      <!--説明文の表示-->
+      <div class="description_text">
+        <p>40％以上の票が集まれば<br>車内エアコンが作動します。</p>
+        <p>今のあなたは？？</p>
+      </div>
+
+      <!--割合の表示-->
+      <div class="ratio_meter">
+        <p class="ratio_meter_text">NOW COUNT</p>
+        <div>
+            <v-progress-linear
+              background-color="pink lighten-3"
+              color="pink lighten-1"
+              value="30"
+              size="10"
+            ></v-progress-linear>
+        </div>
+      </div>
+<!--投票ボタンと温度の表示-->
+      <div class="temperature_feeling_button">
+        <!--投票ボタンの表示-->
+        <v-btn v-on:click="state_comfortable" class="temperature_feeling_button_top">
+          <a class="state_comfortable_text">快適</a>
+        </v-btn>
+        <v-btn v-on:click="state_temperatureUp" class="temperature_feeling_button_right">
+          <a class="state_temperatureUp_text">あつく<br>したい</a>
+        </v-btn>
+        <v-btn v-on:click="state_temperatureDown" class="temperature_feeling_button_left">
+          <a class="state_temperatureDown_text">さむく<br>したい</a>
+        </v-btn>
+        <v-btn v-on:click="state_odor" class="temperature_feeling_button_bottom">
+          <a class="state_odor_text">くさい</a>
+        </v-btn>
+        <!--温度の表示-->
+        <div class="temperature_feeling_button_center">
+          <div v-if="change_image === 1">
+            <img src="images/atui.png" height="80px" width="120px">
+          </div>
+          <div v-else-if="change_image === 2">
+            <img src="images/samui.png" height="100px" width="100px">
+          </div>
+          <div v-else>
+            <a class="temperature_text_top">現在</a>
+            <a class="temperature_text_pressure">{{temperature}}</a>
+            <a class="temperature_text_bottom">℃</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--JavaScript-->
+    <script src="main.js"></script>
+  </body>
+</html>

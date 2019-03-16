@@ -1,0 +1,174 @@
+/*全体の表示*/
+body {
+    margin: 0pt;
+    font-family: "ＭＳ ゴシック",sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    z-index:0;
+    overflow: hidden;
+}
+
+body::before{
+    content: '';
+    background-image: url("images/hankyu.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 0.2;/*半透明カラーの透明度*/
+    filter: blur(1px);/*ぼかし度*/
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    z-index: -1;
+}
+
+/*車両ナンバーの表示*/
+.train_number_text {
+    font-family: "ＭＳ 明朝",serif;
+    padding-top: 10px;
+}
+
+.train_number p{
+    margin-bottom: 0;
+}
+
+/*モード切り替えボタンの表示*/
+.mode_change_button {
+    font-size: 100%;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*説明文の表示*/
+.description_text {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+/*投票ボタンと温度の表示*/
+.temperature_feeling_button {
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    position: relative;
+    box-pack: none;
+    top: -44px;
+}
+
+/*投票ボタンの表示*/
+.temperature_feeling_button_top {
+    width: 150px;
+    height: 150px;
+    border-radius: 100% 0% 0% 0%;
+    border: 4px solid white;
+    background-image: linear-gradient(125deg, #709dff 0%, #91fdb7 100%);
+    transform: rotate(45deg);
+    position: absolute !important;
+    left: 27%;
+    z-index: 1;
+}
+
+.temperature_feeling_button_right {
+    width: 150px;
+    height: 150px;
+    border-radius: 0% 100% 0% 0%;
+    border: 4px solid white;
+    background-image: linear-gradient(125deg, #709dff 0%, #91fdb7 100%);
+    transform: rotate(45deg);
+    position: absolute !important;
+    top: 30%;
+    left: 57%;
+    z-index: 1;
+}
+
+.temperature_feeling_button_left {
+    width: 150px;
+    height: 150px;
+    border-radius: 0% 0% 0% 100%;
+    border: 4px solid white;
+    background-image: linear-gradient(125deg, #709dff 0%, #91fdb7 100%);
+    transform: rotate(45deg);
+    position: absolute !important;
+    top: 30%;
+    left: -3%;
+    z-index: 1;
+}
+
+.temperature_feeling_button_bottom {
+    width: 150px;
+    height: 150px;
+    border-radius: 0% 0% 100% 0%;
+    border: 4px solid white;
+    background-image: linear-gradient(125deg, #709dff 0%, #91fdb7 100%);
+    transform: rotate(45deg);
+    position: absolute !important;
+    top: 60%;
+    left: 27%;
+    z-index: 1;
+}
+
+/*温度の表示*/
+.temperature_feeling_button_center {
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #fff;
+    width: 120px;
+    height: 120px;
+    border: solid;
+    border-width: 8px;
+    border-radius: 50%;
+    border-color: white;
+    background-image: linear-gradient(160deg, #709dff 0%, #91fdb7 100%);
+    position: absolute;
+    top: 36%;
+    left: 33%;
+    z-index: 2;
+}
+
+.temperature_text_top{
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 33%;
+}
+
+.temperature_text_pressure{
+    color: white;
+    font-weight: 600;
+    font-size: 250%;
+    position: absolute;
+    top: 24%;
+    left: 10%;
+}
+
+.temperature_text_bottom {
+    color: white;
+    position: absolute;
+    top: 53%;
+    left: 74%;
+}
+
+.state_comfortable_text,
+.state_temperatureUp_text,
+.state_temperatureDown_text,
+.state_odor_text
+{
+    font-weight: 600;
+    transform: rotate(-45deg);
+}
+
+.ratio_meter {
+    width: 80%;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 70%;
+    left: 9%;
+}
+
+.ratio_meter_text {
+    font-weight: 600;
+    color: #00CC99;
+}

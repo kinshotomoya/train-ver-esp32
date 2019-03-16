@@ -1,0 +1,101 @@
+body {
+    margin: 0pt;
+    font-size: 14pt;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    z-index:0;
+    overflow: hidden;
+}
+
+body::after{
+    content: '';
+    background-color: red;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 0.6;/*半透明カラーの透明度*/
+    filter: blur(1px);/*ぼかし度*/
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    z-index: -1;
+  }
+
+/*車両ナンバーの表示*/
+.train_number_text {
+    font-family: "ＭＳ 明朝",serif;
+    padding-top: 10px;
+}
+.train_number p{
+    margin-bottom: 0;
+}
+
+body::before{
+    content: '';
+    background-image: url("../images/hankyu.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    filter: blur(1px);/*ぼかし度*/
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    z-index: -1;
+  }
+
+.sos_button {
+    height: 80vw;
+    width: 80vw;
+    text-align: center;
+}
+
+.sos_button i{
+    font-size: 120px;
+    color: #ba1203;
+}
+
+.sos_button .h_sos{
+    color: #ba1203;
+    font-size: 50px;
+    top: -65% !important;
+    display: block;
+    width: 100%;
+}
+
+.sos_button .des_sos{
+    top: 120% !important;
+    color: black;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    opacity: 1 !important;
+    -webkit-transform: rotate(0) !important;
+    transform: rotate(0) !important;
+}
+
+.mode_change_button {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.description_text {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    color: white;
+}
+
+.description_text.bottom_text{
+    margin-top: 30px;
+    font-size: 14px;
+    color: white;
+}
+
+.ratio_meter {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
