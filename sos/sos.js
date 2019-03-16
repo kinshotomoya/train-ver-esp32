@@ -149,11 +149,13 @@ function initializeLiff() { //Bluetoothを探す。
 function liffCheckAvailablityAndDo(callbackIfAvailable) { //使用可能なBluetoothか確認
     // Check Bluetooth availability
     liff.bluetooth.getAvailability().then(isAvailable => { //エラーの有無の確認
+        window.alert("blutoothできる？" + isAvailable);
         if (isAvailable) { //エラーの有無の確認
             uiToggleDeviceConnected(false);
             callbackIfAvailable();
         } else {
             uiStatusError("Bluetooth not available", true);
+            window.alert("Bluetooth not available");
             setTimeout(() => liffCheckAvailablityAndDo(callbackIfAvailable), 10000);
         }
     }).catch(error => {
